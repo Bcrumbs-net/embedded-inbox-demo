@@ -1,10 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-http-backend';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import Backend from "i18next-http-backend";
 
-export const LOCAL_STORAGE_I18N_STRING = 'I18N_SELECTION';
+export const LOCAL_STORAGE_I18N_STRING = "I18N_SELECTION";
 
-const systemDefaultLang = 'en';
+const systemDefaultLang = "en";
 const init = ({
   version,
   customPath,
@@ -21,17 +21,20 @@ const init = ({
     .init({
       lng: currentLng,
       fallbackLng: systemDefaultLang,
-      ns: ['common', 'inbox'], // define your namespaces
-      defaultNS: 'common',
+      ns: ["common", "inbox"], // define your namespaces
+      defaultNS: "common",
       interpolation: {
         escapeValue: false,
       },
-      load: 'languageOnly',
+      load: "languageOnly",
       backend: {
         loadPath: customPath
           ? customPath
-          : `/assets/{{lng}}/{{ns}}.json?v=${version ?? ''}`,
+          : `/assets/{{lng}}/{{ns}}.json?v=${version ?? ""}`,
       },
+      react: {
+        useSuspense: false
+      }
     });
 };
 
@@ -51,6 +54,6 @@ export const LangService = {
 };
 
 export enum Languages {
-  EN = 'en',
-  AR = 'ar'
+  EN = "en",
+  AR = "ar",
 }
