@@ -92,6 +92,32 @@ This is a React-based demo application for an embedded inbox, built with TypeScr
     ```
   - Customize themes by overriding CSS variables or using the Radix UI design tokens.
 
+- **Generic styles:**
+  - You need to import the next css files:
+  ```html
+    <link
+      rel="stylesheet"
+      href="https://cdn.bcrumbs.net/bc-assets/styles/skin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bcrumbs.net/bc-assets/styles/skeleton.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bcrumbs.net/bc-assets/styles/radix-ui.css"
+    />
+  ```
+  - It's recommonded to import the following font file:
+  ```html
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,700&display=swap"
+      rel="stylesheet"
+    />
+  ```
+  - In skeleton.css we are applying `box-sizing: border-box;` to the body element, in case you don't prefer that just override it for the body, but keep it applied on our inbox component, otherwise styling will not appear correctly
+
+
 - **Required local storage key-value paris:**
   - In order for the Inbox component to work probably you will need to have some localstroage key-value pairs defined before rendering it:
     - `ContextId`: Which is the workspace id of the account you want the Inbox component to work on.
