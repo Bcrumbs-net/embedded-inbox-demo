@@ -1,7 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { ApolloProvider } from '@apollo/client';
-import { Inbox, ThemeProvider } from '@bcrumbs.net/inbox';
-import { dconfigClient } from '@bcrumbs.net/bc-api';
+import { ApolloProvider, ServerError } from '@apollo/client';
+import { Inbox, ThemeProvider, dconfigClient, setErrorHandler } from '@bcrumbs.net/inbox';
+
+setErrorHandler(({ networkError, graphQLErrors }) => {
+    console.log('networkError', networkError);
+    if (
+        networkError &&
+        ((networkError as ServerError).statusCode > 500 &&
+            (networkError as ServerError).statusCode !== 503)
+    ) {
+        console.log('The server is down, please try again later.');
+    }
+
+    if (
+        graphQLErrors &&
+        graphQLErrors.find((error) => error?.extensions?.['code'] === 'FORBIDDEN')
+    ) {
+        console.log('The token is expired or invalid, please get a new token.');
+    }
+});
 
 
 const EmbeddedInboxTest: React.FC = () => {
@@ -23,7 +40,7 @@ const EmbeddedInboxTest: React.FC = () => {
         <ApolloProvider client={dconfigClient}>
             <ThemeProvider>
                 <div className="test-wrapper">
-                    <Inbox rtl={false} onConversationChange={(conv) => console.log(`Conversation with id ${conv.id} is selected`)} />
+                    <Inbox rtl={false} onConversationChange={(conv) => console.log(`Conversation with id ${conv.id} is selected`)} initialFilters={{ nameOrPhone: '553464' }} />
                 </div>
             </ThemeProvider>
         </ApolloProvider>
