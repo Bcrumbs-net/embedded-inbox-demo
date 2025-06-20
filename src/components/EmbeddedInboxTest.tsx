@@ -38,9 +38,9 @@ const EmbeddedInboxTest: React.FC = () => {
 
     return (
         <ApolloProvider client={dconfigClient}>
-            <ThemeProvider>
-                <div className="test-wrapper">
-                    <Inbox rtl={false} onConversationChange={(conv) => console.log(`Conversation with id ${conv.id} is selected`)} initialFilters={{ nameOrPhone: '553464' }} logo={"https://png.pngtree.com/png-clipart/20190614/original/pngtree-settings-line-black-icon-png-image_3767553.jpg"}/>
+            <ThemeProvider initialThemeValues={{ rtl: true, toggleLang: () => { } }}>
+                <div className="test-wrapper" dir="rtl">
+                    <Inbox rtl={true} onConversationChange={(conv) => console.log(`Conversation with id ${conv.id} is selected`)} initialFilters={{ nameOrPhone: '553464' }} logo={"https://png.pngtree.com/png-clipart/20190614/original/pngtree-settings-line-black-icon-png-image_3767553.jpg"} />
                 </div>
             </ThemeProvider>
         </ApolloProvider>

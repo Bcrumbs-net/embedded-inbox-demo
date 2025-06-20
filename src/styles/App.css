@@ -44,4 +44,9 @@ h6 {
 .App {
   height: 100vh;
   width: 100%;
+  direction: rtl;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }

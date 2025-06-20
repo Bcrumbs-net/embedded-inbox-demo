@@ -1,6 +1,8 @@
 {
   "inbox": {
+    "none": "None",
     "client": "Client",
+    "agent": "Agent",
     "clientDefaultName": "Client Name",
     "conversation": "Conversation",
     "details": "Details",
@@ -64,7 +66,6 @@
     "assignedMessage": "The agent \"{{agentName}}\" is assigned to the conversation.",
     "noBroadcasts": "You have not created any Broadcast",
     "createBroadcast": "Create Broadcast",
-    "filterByState": "Filter by state",
     "broadcastState": {
       "all": "All",
       "completed": "Completed",
@@ -87,6 +88,7 @@
     "broadcastDetails": "Broadcast details",
     "clientsDetails": "Target Client Details",
     "searchConvs": "Search inside conversations",
+    "searchConvsByNamePhone": "Search by name or phone",
     "createNewAgent": "Create New Agent",
     "createNewLifeCycle": "Add a new Lifecycle",
     "noAgentNote": "You don't have an agent for your account yet, do you want to create one?",
@@ -103,8 +105,13 @@
     "messageType_note": "Note",
     "messageType_video": "Video",
     "showOlderMessages": "Show older messages",
+    "selectCountry": "Select country",
     "integration": "Integration / Channel",
-    "newClient": "New client"
+    "newClient": "New client",
+    "filterByState": "Filter by state",
+    "filterByAssignee": "Filter by assignee",
+    "filterByLifeCycle": "Filter by life-cycle",
+    "moreThan100Conversations": "More than 100 conversations found, we only show the first 100 to avoid performance issues. Please refine your search or try to close some conversations."
   },
   "id": "ID",
   "save": "Save",
@@ -133,5 +140,11 @@
   "no": "No",
   "tryAgain": "Try agian",
   "customerSupport": "Customer support",
-  "searchPattern": "Search pattern"
+  "searchPattern": "Search pattern",
+  "outside24HourWindow": "Outside 24 hour window",
+  "outside24HourWindowDetails": "You can only send a message to clients who have messaged you in the last 24 hours.",
+  "outside24HourWindowSendTemplate": "You can initiate a conversation with the client again by sending a message template.",
+  "send": "Send",
+  "liveConversations": "Live conversations",
+  "menu_search": "Search"
 }

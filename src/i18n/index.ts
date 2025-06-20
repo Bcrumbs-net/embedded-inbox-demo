@@ -4,7 +4,7 @@ import Backend from "i18next-http-backend";
 
 export const LOCAL_STORAGE_I18N_STRING = "I18N_SELECTION";
 
-const systemDefaultLang = "en";
+const systemDefaultLang = "ar";
 const init = ({
   version,
   customPath,

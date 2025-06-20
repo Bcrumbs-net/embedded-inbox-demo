@@ -115,7 +115,7 @@ This is a React-based demo application for an embedded inbox, built with TypeScr
       rel="stylesheet"
     />
   ```
-  - In skeleton.css we are applying `box-sizing: border-box;` to the body element, in case you don't prefer that just override it for the body, but keep it applied on our inbox component, otherwise styling will not appear correctly
+  - In App.css we are applying `box-sizing: border-box` to all elements, in case you don't prefer that just override it for the body, but keep it applied on all elements under our inbox component, otherwise styling will not appear correctly.
 
 
 - **Required local storage key-value paris:**
