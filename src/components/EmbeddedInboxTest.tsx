@@ -15,7 +15,7 @@ setErrorHandler(({ networkError, graphQLErrors }) => {
 
     if (
         graphQLErrors &&
-        graphQLErrors.find((error) => error?.extensions?.['code'] === 'FORBIDDEN')
+        graphQLErrors.find((error) => error?.extensions?.['code'] === 'UNAUTHENTICATED')
     ) {
         console.log('The token is expired or invalid, please get a new token.');
     }
