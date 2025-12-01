@@ -29,7 +29,7 @@ const EmbeddedInboxTest: React.FC = () => {
     useEffect(() => {
         // Initialize the localStorage with API key, context id (workspace id), and user info
         localStorage.setItem('ContextId', '1132');
-        localStorage.setItem('token', 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
+        localStorage.setItem('token', 'd7502a35-3e34-4a7d-b56a-f37c5398efae');
         localStorage.setItem('userInfo', '{"username":"agent","id":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}');
         setIsStorageReady(true);
     }, []);
@@ -44,6 +44,7 @@ const EmbeddedInboxTest: React.FC = () => {
                 <div className="test-wrapper" dir="rtl">
                     <Inbox
                         rtl={true}
+                        showDetails={true}
                         onConversationChange={(conv) => console.log(`Conversation with id ${conv.id} is selected`)}
                         initialFilters={filters}
                         onFiltersChange={(filters) => {

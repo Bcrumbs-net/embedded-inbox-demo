@@ -95,18 +95,15 @@ This is a React-based demo application for an embedded inbox, built with TypeScr
 - **Generic styles:**
   - You need to import the next css files:
   ```html
-    <link
-      rel="stylesheet"
-      href="https://cdn.bcrumbs.net/bc-assets/styles/skin.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.bcrumbs.net/bc-assets/styles/skeleton.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.bcrumbs.net/bc-assets/styles/radix-ui.css"
-    />
+     <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/constants.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/themes/dark.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/index.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/skin.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/skeleton.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/styles/radix-ui.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/icons/icons.css" />
+    <link rel="stylesheet" href="https://cdn.bcrumbs.net/bc-assets/icons/flaticon.css" />
   ```
   - It's recommonded to import the following font file:
   ```html
