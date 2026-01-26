@@ -30,7 +30,6 @@ const EmbeddedInboxTest: React.FC = () => {
         // Initialize the localStorage with API key, context id (workspace id), and user info
         localStorage.setItem('ContextId', '1132');
         localStorage.setItem('token', 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
-        localStorage.setItem('userInfo', '{"username":"agent","id":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}');
         setIsStorageReady(true);
     }, []);
 
