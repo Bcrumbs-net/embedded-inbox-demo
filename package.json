@@ -17,7 +17,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "@azure/storage-blob": "^12.27.0",
-    "@bcrumbs.net/inbox": "^0.0.60",
+    "@bcrumbs.net/inbox": "^0.0.62",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@marsidev/react-turnstile": "^1.4.2",
